@@ -1,0 +1,33 @@
+<!-- <button style="margin-left: 90%;" mat-raised-button class="btn btn-success" >add</button> -->
+<button style="margin-left: 90%;" type="button" class="btn btn-secondary" (click)="add()">Add</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">middlename</th>
+        <th scope="col">lastname</th>
+        <th scope="col">email</th>
+        <td>action</td>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let staff of staffList">
+        <th >{{staff.id}}</th>
+        <td>{{staff.firstname}}</td>
+        <td>{{staff.middlename}}</td>
+        <td>{{staff.lastname}}</td>
+        <td>{{staff.email}}</td>
+        <td>
+          <span><button mat-raised-button color="primary" (click)="edit(staff)">edit</button>
+          </span>|
+          <span><button mat-raised-button color="warn" >delete</button>
+          </span>
+        </td>
+      </tr>
+      
+     
+    </tbody>
+  </table>

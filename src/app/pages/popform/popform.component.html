@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>Staff Registration</mat-card-title>
+    <mat-card-content>
+        <div class="container">
+            <form [formGroup]="personal" autocomplete="off" >
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Firstname</label>
+                            <input type="text" formControlName="firstname" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>middlename</label>
+                            <input type="text" formControlName="middlename" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>lastname</label>
+                            <input type="text" formControlName="lastname" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>email</label>
+                            <input type="email" formControlName="email" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button [disabled]="personal.invalid" type="submit" class="btn btn-outline-success" (click)="save()">save</button>||
+                        <button type="button" class="btn btn-outline-danger" (click)="close()">close</button>
+
+                    </div>
+
+                    <!-- <div class="col-md-6">
+                        <button type="button" class="btn btn-outline-danger" (click)="close()">close</button>
+                    </div> -->
+                </div> 
+            </form>
+        </div>
+    </mat-card-content>
+  </mat-card>
+  
