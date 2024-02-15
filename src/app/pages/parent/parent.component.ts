@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
+  currentBeverage="coffee";
+
+  beverage=['milk','yoghurt','fresh']
+
+
+  addNew(newbeverage:string){
+    this.beverage.push(newbeverage);
+
+  }
+
 }

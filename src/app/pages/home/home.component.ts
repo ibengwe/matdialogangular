@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopformComponent } from '../popform/popform.component';
-import { DialogRef } from '@angular/cdk/dialog';
 import { StaffService } from '../../services/staff.service';
 import { Staff } from '../../model/staff';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,12 @@ import { Staff } from '../../model/staff';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+  @Output() public addTocart=new EventEmitter<Staff>()
+
   staffList!: Staff[];
   constructor(private dialog:MatDialog,
-    private staffService:StaffService
+    private staffService:StaffService,
+    private route:Router
       
     ){}
   ngOnInit(): void {
@@ -60,5 +63,15 @@ export class HomeComponent implements OnInit {
       this.getAll();
     })  
   }
+
+  onCart(ids:number){
+    this.addTocart.emit(this.staffList.find(staff=>staff.id===ids));
+    this.route.navigate(['/cart'])
+
+    //console.log(this.staffList.find(staff=>staff.id===ids))
+    
+  }
+
+  
 
 }

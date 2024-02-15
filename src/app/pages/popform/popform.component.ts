@@ -37,7 +37,10 @@ export class PopformComponent implements OnInit{
         firstname: this.staff.firstname,
         middlename: this.staff.middlename,
         lastname: this.staff.lastname,
-        email: this.staff.email
+        email: this.staff.email,
+        quantity: this.staff.quantity,
+        price: this.staff.price,
+
       });
     }
   }
@@ -48,6 +51,9 @@ export class PopformComponent implements OnInit{
       middlename:new FormControl('',[Validators.required]),
       lastname:new FormControl('',[Validators.required]),
       email:new FormControl('',[Validators.required,Validators.email]),
+      quantity:new FormControl('',[Validators.required]),
+      price:new FormControl('',[Validators.required]),
+
     })
   }
   popClose(){

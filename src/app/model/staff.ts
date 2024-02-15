@@ -4,5 +4,7 @@ export interface Staff {
     middlename:string;
     lastname:string;
     email:string;
+    quantity:number;
+    price:number
     
 }

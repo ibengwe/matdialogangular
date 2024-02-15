@@ -1,5 +1,6 @@
 <mat-card>
-    <mat-card-title>Staff Registration</mat-card-title>
+<h2 mat-dialog-title style="text-align: center;">STAFF REGISTRATION FORM</h2>
+
     <mat-card-content>
         <div class="container">
             <form [formGroup]="personal" autocomplete="off" >
@@ -24,6 +25,14 @@
                             <label>email</label>
                             <input type="email" formControlName="email" class="form-control">
                         </div>
+                        <div class="col-md-6">
+                            <label>quantity</label>
+                            <input type="number" formControlName="quantity" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label>price</label>
+                            <input type="number" formControlName="price" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -33,9 +42,7 @@
 
                     </div>
 
-                    <!-- <div class="col-md-6">
-                        <button type="button" class="btn btn-outline-danger" (click)="close()">close</button>
-                    </div> -->
+                    
                 </div> 
             </form>
         </div>

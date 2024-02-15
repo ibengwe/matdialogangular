@@ -20,6 +20,7 @@ import { ParentComponent } from './pages/parent/parent.component';
 import { ChildComponent } from './pages/child/child.component';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     PopformComponent,
     HomeComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

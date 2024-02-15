@@ -4,6 +4,7 @@ import { MainComponent } from './navigation/main/main.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ParentComponent } from './pages/parent/parent.component';
 import { ChildComponent } from './pages/child/child.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   {path:"",component:MainComponent,
@@ -11,10 +12,10 @@ const routes: Routes = [
     {path:"",component:HomeComponent},
     {path:"parent",component:ParentComponent},
     {path:"child",component:ChildComponent},
+    {path:"cart",component:CartComponent},
 
 
   ]
-
 }
 ];
 

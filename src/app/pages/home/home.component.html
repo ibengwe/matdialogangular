@@ -9,8 +9,9 @@
         <th scope="col">middlename</th>
         <th scope="col">lastname</th>
         <th scope="col">email</th>
+        <!-- <th scope="col">quantity</th>
+        <th scope="col">price</th> -->
         <td>action</td>
-
       </tr>
     </thead>
     <tbody>
@@ -20,10 +21,12 @@
         <td>{{staff.middlename}}</td>
         <td>{{staff.lastname}}</td>
         <td>{{staff.email}}</td>
+        <!-- <td>{{staff.quantity}}</td>
+        <td>{{staff.price}}</td> -->
         <td>
           <span><button mat-raised-button color="primary" (click)="edit(staff)">edit</button>
           </span>|
-          <span><button mat-raised-button color="warn" >delete</button>
+          <span><button mat-raised-button color="warn" (click)="onCart(staff.id)">cart</button>
           </span>
         </td>
       </tr>

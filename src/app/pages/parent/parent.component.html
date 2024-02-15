@@ -1,1 +1,8 @@
-<p>parent works!</p>
+<div class="parent">
+    <h2>This is a Parent Component</h2>
+<ul>
+    <li *ngFor="let bev of beverage" >{{bev}}</li>
+</ul>
+
+    <app-child [beverages]="currentBeverage" (newbeverages)="addNew($event)"></app-child>
+</div>

@@ -1,0 +1,41 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">middlename</th>
+        <th scope="col">lastname</th>
+        <th scope="col">email</th>
+        <th scope="col">quantity</th>
+        <th scope="col">price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cart of shoppingCart">
+        <th >{{cart.id}}</th>
+        <td>{{cart.firstname}}</td>
+        <td>{{cart.middlename}}</td>
+        <td>{{cart.lastname}}</td>
+        <td>{{cart.email}}</td>
+        <td>{{cart.quantity}}</td>
+        <td>{{cart.price*cart.quantity}}</td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>Totall</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td>{{total}}</td>
+
+      </tr>
+      
+     
+    </tbody>
+  </table>
+
+<app-home (addTocart)="AddTocart($event)"></app-home>

@@ -1,1 +1,8 @@
-<p>child works!</p>
+<div class="child">
+    <h2>This is a child components</h2>
+    <h3>comes from th child {{beverages}}</h3>
+    <input type="text" #newbeverages>
+
+    <button (click)="addNew(newbeverages.value)">add</button>
+
+</div>
